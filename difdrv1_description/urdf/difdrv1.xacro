@@ -1,0 +1,354 @@
+<?xml version="1.0" ?>
+<robot name="difdrv1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find difdrv1_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find difdrv1_description)/urdf/difdrv1.trans" />
+<xacro:include filename="$(find difdrv1_description)/urdf/difdrv1.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="7.502486026261859e-16 0.040808268425742804 0.006491713565837926"/>
+    <mass value="0.12755476015513142"/>
+    <inertia ixx="0.000368" ixy="-0.0" ixz="0.0" iyy="0.000379" iyz="0.0" izz="0.000746"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stand1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 2.0816681711721685e-17 0.04000000000000001"/>
+    <mass value="0.05882044717802503"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="0.0" iyy="3.2e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.092 0.042 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.092 0.042 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stand2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 -2.7755575615628914e-17 0.04000000000000001"/>
+    <mass value="0.05882044717802503"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="0.0" iyy="3.2e-05" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.092 0.042 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.092 0.042 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stand4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 -2.7755575615628914e-17 0.04000000000000001"/>
+    <mass value="0.05882044717802503"/>
+    <inertia ixx="3.2e-05" ixy="-0.0" ixz="0.0" iyy="3.2e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.092 -0.05 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.092 -0.05 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stand3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.7755575615628914e-17 2.0816681711721685e-17 0.04000000000000001"/>
+    <mass value="0.05882044717802503"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="0.0" iyy="3.2e-05" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.092 -0.05 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.092 -0.05 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/stand3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_plate_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.10000000000000003 -0.009334985891859299 0.001500000000000029"/>
+    <mass value="0.1272631810869704"/>
+    <inertia ixx="0.000367" ixy="0.0" ixz="-0.0" iyy="0.000378" iyz="0.0" izz="0.000744"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.1 -0.05 -0.088"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.1 -0.05 -0.088"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor_Mount_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.009510566172035759 3.4067382248537115e-07 0.007277565919577289"/>
+    <mass value="0.024172386699614672"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="2e-06" iyy="6e-06" iyz="-0.0" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.08 -0.0 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_Mount_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.08 -0.0 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_Mount_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03251638218202085 -2.089257586379567e-16 -0.00011158449269127804"/>
+    <mass value="0.20281029076089996"/>
+    <inertia ixx="1.3e-05" ixy="0.0" ixz="1e-06" iyy="7.9e-05" iyz="-0.0" izz="7.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.099717 -0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.099717 -0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0325163821820208 3.2542328207152416e-16 -0.00011158449269127804"/>
+    <mass value="0.20281029076089996"/>
+    <inertia ixx="1.3e-05" ixy="0.0" ixz="-1e-06" iyy="7.9e-05" iyz="0.0" izz="7.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.099717 0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.099717 0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0023664114803909064 7.404858714046836e-10 6.14458227954362e-06"/>
+    <mass value="0.02002160135498839"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="3e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.114668 0.000456 -0.02176"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.114668 0.000456 -0.02176"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0023664114803910175 -7.404858083583273e-10 6.1445822795783145e-06"/>
+    <mass value="0.02002160135498839"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="-0.0" iyy="3e-06" iyz="-0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.114668 -0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.114668 -0.000456 -0.021456"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02009192633575899 -0.035233381580401416 0.035268184247223056"/>
+    <mass value="1.3392964352221826"/>
+    <inertia ixx="0.000967" ixy="1e-06" ixz="3e-06" iyy="0.000619" iyz="0.000159" izz="0.001105"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.02 -0.105 -0.091"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.02 -0.105 -0.091"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Motor_Mount1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009510566172035842 -3.406738224676076e-07 0.007277565919577206"/>
+    <mass value="0.024172386699614672"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-2e-06" iyy="6e-06" iyz="0.0" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.08 0.0 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_Mount1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.08 0.0 -0.008"/>
+    <geometry>
+      <mesh filename="package://difdrv1_description/meshes/Motor_Mount1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.092 -0.042 0.008"/>
+  <parent link="base_link"/>
+  <child link="stand1_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.092 -0.042 0.008"/>
+  <parent link="base_link"/>
+  <child link="stand2_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.092 0.05 0.008"/>
+  <parent link="base_link"/>
+  <child link="stand4_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.092 0.05 0.008"/>
+  <parent link="base_link"/>
+  <child link="stand3_1"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.008 0.0 0.08"/>
+  <parent link="stand3_1"/>
+  <child link="top_plate_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.08 0.0 0.008"/>
+  <parent link="base_link"/>
+  <child link="Motor_Mount_2_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.019717 0.000456 0.013456"/>
+  <parent link="Motor_Mount_2_1"/>
+  <child link="Motor_2_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.019717 -0.000456 0.013456"/>
+  <parent link="Motor_Mount1_1"/>
+  <child link="Motor1_1"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="0.014951 0.0 0.000304"/>
+  <parent link="Motor1_1"/>
+  <child link="wheel_1_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev11" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.014951 0.0 0.0"/>
+  <parent link="Motor_2_1"/>
+  <child link="wheel_2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="0.08 0.055 0.003"/>
+  <parent link="top_plate_1"/>
+  <child link="lidar_v1_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.08 0.0 0.008"/>
+  <parent link="base_link"/>
+  <child link="Motor_Mount1_1"/>
+</joint>
+
+</robot>
